@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Homepage with Navbar</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.hero {
+  min-height: 100vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("https://www.socwall.com/images/wallpapers/70331-2048x1367.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.navbar {
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  color: hsl(0, 17%, 91%);
+  font-size: 26px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.btn {
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: 500;
+color:white;
+background: #898686;
+
+}
+
+.btn:hover {
+  background: transparent;
+  border: 1px solid #fff;
+color:rgb(16, 16, 16);
+background: #dad5d5;
+
+}
+.hero-content {
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  max-width: 600px;
+}
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 5%;
+    background: rgba(0,0,0,0.8);
+    flex-direction: column;
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    display: none;
+  }
+
+ 
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <nav class="navbar">
+    <a href="#" class="logo">Brand</a>
+
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#" class="btn">Get Started</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+    <h1>Welcome to Our Website</h1>
+    <p>Create beautiful, modern websites with stunning background images.</p>
+  </div>
+</section>
+
+</body>
+</html>
